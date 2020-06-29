@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CommonModels
+﻿namespace CommonModels
 {
     public sealed class BinaryTreeNode<T>
     {
