@@ -3,14 +3,14 @@ using CommonModels;
 
 namespace Leetcode
 {
-    public abstract class Binary_Tree_Preorder_Traversal_144
+    public abstract class BinaryTreePreorderTraversal_144
     {
         public abstract IList<int> PreorderTraversal(TreeNode root);
     }
 
     public class BinaryTreePreorderTraversalFactory
     {
-        public static Binary_Tree_Preorder_Traversal_144 GetConcrete(bool useRecursion)
+        public static BinaryTreePreorderTraversal_144 GetConcrete(bool useRecursion)
         {
             if (useRecursion)
                 return new BinaryTreePreorderTraversal_WithRecursion();
@@ -19,7 +19,7 @@ namespace Leetcode
         }
     }
 
-    public class BinaryTreePreorderTraversal_WithRecursion : Binary_Tree_Preorder_Traversal_144
+    public class BinaryTreePreorderTraversal_WithRecursion : BinaryTreePreorderTraversal_144
     {
         public override IList<int> PreorderTraversal(TreeNode root)
         {
@@ -44,7 +44,7 @@ namespace Leetcode
         }
     }
 
-    public class BinaryTreePreorderTraversal_WithStack : Binary_Tree_Preorder_Traversal_144
+    public class BinaryTreePreorderTraversal_WithStack : BinaryTreePreorderTraversal_144
     {
         public override IList<int> PreorderTraversal(TreeNode root)
         {
