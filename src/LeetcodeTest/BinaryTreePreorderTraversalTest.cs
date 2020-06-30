@@ -45,7 +45,7 @@ namespace LeetcodeTest
             var result = t.PreorderTraversal(tree);
 
             Assert.Equal(3, result.Count);
-            Assert.True(result.ContainsSameElement(new[] { 20, 25, 21 }));
+            Assert.True(result.SameAs(new[] { 20, 25, 21 }));
         }
 
         [Fact]
@@ -67,7 +67,7 @@ namespace LeetcodeTest
             var result = t.PreorderTraversal(tree);
 
             Assert.Equal(4, result.Count);
-            Assert.True(result.ContainsSameElement(new[] { 20, 15, 12, 7 }));
+            Assert.True(result.SameAs(new[] { 20, 15, 12, 7 }));
         }
 
         [Fact]
@@ -92,7 +92,7 @@ namespace LeetcodeTest
             var result = t.PreorderTraversal(tree);
 
             Assert.Equal(7, result.Count);
-            Assert.True(result.ContainsSameElement(new[] { 20, 10, 5, 13, 36, 30, 37 }));
+            Assert.True(result.SameAs(new[] { 20, 10, 5, 13, 36, 30, 37 }));
         }
     }
 }

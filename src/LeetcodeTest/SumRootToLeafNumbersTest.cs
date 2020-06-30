@@ -89,5 +89,25 @@ namespace LeetcodeTest
 
             Assert.Equal(9646, target.SumNumbers(tree1));
         }
+
+        [Fact]
+        public void TestWithZeroValueLeaf()
+        {
+            var target = new SumRootToLeafNumbers_129();
+
+            var tree1 = new TreeNode(9)
+            {
+                left = new TreeNode(0)
+                {
+                    left = new TreeNode(0)
+                    {
+                        left = new TreeNode(0)
+                    }
+                },
+                right = new TreeNode(1)
+            };
+
+            Assert.Equal(9091, target.SumNumbers(tree1));
+        }
     }
 }
