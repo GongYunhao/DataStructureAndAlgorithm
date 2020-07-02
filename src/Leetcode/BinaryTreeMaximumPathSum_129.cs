@@ -17,8 +17,8 @@ namespace Leetcode
 
         private int MaxPathSumRecursively(TreeNode subTreeRoot)
         {
-            int? left = subTreeRoot.left == null ? default : MaxPathSumRecursively(subTreeRoot.left);
-            int? right = subTreeRoot.right == null ? default : MaxPathSumRecursively(subTreeRoot.right);
+            int? left = subTreeRoot.left == null ? null : (int?)MaxPathSumRecursively(subTreeRoot.left);
+            int? right = subTreeRoot.right == null ? null : (int?)MaxPathSumRecursively(subTreeRoot.right);
 
             ReplaceResultWithLarger(left);
             ReplaceResultWithLarger(right);
@@ -30,7 +30,7 @@ namespace Leetcode
 
             if (HasAboveZeroValue(left) && HasAboveZeroValue(right))
             {
-                var pathVal = subTreeRoot.val + left.Value > right.Value ? left.Value : right.Value;
+                var pathVal = subTreeRoot.val + (left.Value > right.Value ? left.Value : right.Value);
                 ReplaceResultWithLarger(pathVal);
                 return pathVal;
             }
